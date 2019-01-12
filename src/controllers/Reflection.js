@@ -23,11 +23,12 @@ const Reflection = {
         message: 'reflection not found',
       });
     }
-    return reflection.status(200).send(reflection);
+    return res
+    .status(200).send(reflection);
   },
 
   update(req, res) {
-    const reflection = ReflectionModel.update(req.params.id);
+    const reflection = ReflectionModel.findOne(req.params.id);
     if (!reflection) {
       return res.status(404).send({ message: 'reflection not found' });
     }

@@ -27,13 +27,16 @@ class Reflection {
     return this.reflections;
   }
 
-  updated(id, data) {
+  update(id, data) {
     const reflection = this.findOne(id);
+    console.log(reflection);
     const index = this.reflections.indexOf(reflection);
-    this.reflections[index].success = data.success || reflection.success;
-    this.reflections[index].lowPoint = data.lowPoint || reflection.lowPoint;
-    this.reflections[index].takeAway = data.takeAway || reflection.takeAway;
-    this.reflections[index].modifiedDate = moment.now();
+    console.log(reflection);
+    console.log(data);
+    reflection.success = data.success || reflection.success;
+    reflection.lowPoint = data.lowPoint || reflection.lowPoint;
+    reflection.takeAway = data.takeAway || reflection.takeAway;
+    reflection.modifiedDate = moment.now()
     return this.reflections[index];
   }
 
