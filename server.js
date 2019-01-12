@@ -16,3 +16,4 @@ app.delete('/api/v1/reflections/:id', Reflection.delete);
 
 const port = process.env.PORT || 3000;
 console.log(`app is running on port ${port}`);
+app.listen(port);
