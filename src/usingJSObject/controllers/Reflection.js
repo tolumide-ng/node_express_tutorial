@@ -24,7 +24,7 @@ const Reflection = {
       });
     }
     return res
-    .status(200).send(reflection);
+      .status(200).send(reflection);
   },
 
   update(req, res) {

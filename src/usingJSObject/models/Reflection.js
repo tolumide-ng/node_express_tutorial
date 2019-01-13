@@ -36,7 +36,7 @@ class Reflection {
     reflection.success = data.success || reflection.success;
     reflection.lowPoint = data.lowPoint || reflection.lowPoint;
     reflection.takeAway = data.takeAway || reflection.takeAway;
-    reflection.modifiedDate = moment.now()
+    reflection.modifiedDate = moment.now();
     return this.reflections[index];
   }
 
